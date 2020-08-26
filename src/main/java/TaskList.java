@@ -14,7 +14,7 @@ public class TaskList {
     }
 
     // after a task is done, the output message will be capture in duke class
-    public void addTask(Task task) throws IOException {
+    public void addTask(Task task) {
         list.add(task);
     }
 

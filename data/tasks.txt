@@ -1,2 +1,3 @@
-[T][✘] hw
-[E][✘] meeting (at: Aug 26 2020)
+[T][✘] say hi
+[T][✘] say buy
+[T][✘] buy smth

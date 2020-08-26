@@ -61,6 +61,24 @@ public class Ui {
         }
     }
 
+    public void showMatchingTask(TaskList task) {
+        if (task.getList().size() > 0) {
+            String size = task.getList().size() == 1 ? "task" : "tasks";
+            System.out.println("\t" + line + "\n\tHere are the matching " + size + " in your list:");
+            int index = 1;
+            List<Task> ls = task.getList();
+            for (Task t : ls) {
+                System.out.println("\t" + index + ". " + t);
+                index++;
+            }
+            System.out.println("\t" + line);
+        } else {
+            System.out.println("\t" + line);
+            System.out.println("\t☹ OOPS!!! Cannot find a matching task :-(");
+            System.out.println("\t" + line);
+        }
+    }
+
     public void printDone(TaskList list, int num) {
         System.out.println("\t" + line + "\n\tNice! I've marked this task as done:\n\t  "
                 + list.getList().get(num-1)
@@ -101,4 +119,5 @@ public class Ui {
     public void errorWithLoading() {
         System.err.println("☹ OOPS!!! Your file cannot be loaded :-(");
     }
+
 }
